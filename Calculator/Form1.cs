@@ -27,85 +27,87 @@ namespace Calculator
         private void Backspace_Click(object sender, EventArgs e)
         {
             Screen.Text = "";
+            if (operation == "^" || operation == "sqrt")
+                operation = "";
         }
 
         private void One_Click(object sender, EventArgs e)
         {
-            if(operation != "^")
+            if(operation != "^" && operation != "sqrt")
                 Screen.Text += "1";
         }
 
         private void Two_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "2";
         }
 
         private void Three_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "3";
         }
 
         private void Four_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "4";
         }
 
         private void Five_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "5";
         }
 
         private void Six_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "6";
         }
 
         private void Seven_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "7";
         }
 
         private void Eight_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "8";
         }
 
         private void Nine_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "9";
         }
 
         private void Zero_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += "0";
         }
 
         private void Dot_Click(object sender, EventArgs e)
         {
-            if (operation != "^")
+            if (operation != "^" && operation != "sqrt")
                 Screen.Text += ",";
         }
 
         string operation = "";
-        float a = 0;
-        float b = 0;
-        float result = 0;
+        double a = 0;
+        double b = 0;
+        double result = 0;
 
         private void Sum_Click(object sender, EventArgs e)
         {
             if (operation == "")
             {
                 operation = "+";
-                a = float.Parse(Screen.Text);
+                a = double.Parse(Screen.Text);
                 Screen.Text = "";
             }
         }
@@ -115,7 +117,7 @@ namespace Calculator
             if (operation == "")
             {
                 operation = "-";
-                a = float.Parse(Screen.Text);
+                a = double.Parse(Screen.Text);
                 Screen.Text = "";
             }
         }
@@ -125,7 +127,7 @@ namespace Calculator
             if (operation == "")
             {
                 operation = "*";
-                a = float.Parse(Screen.Text);
+                a = double.Parse(Screen.Text);
                 Screen.Text = "";
             }
         }
@@ -135,7 +137,7 @@ namespace Calculator
             if (operation == "")
             {
                 operation = "/";
-                a = float.Parse(Screen.Text);
+                a = double.Parse(Screen.Text);
                 Screen.Text = "";
             }
         }
@@ -145,8 +147,18 @@ namespace Calculator
             if (operation == "")
             {
                 operation = "^";
-                a = float.Parse(Screen.Text);
+                a = double.Parse(Screen.Text);
                 Screen.Text = a + "²";
+            }
+        }
+
+        private void Squareroot_Click(object sender, EventArgs e)
+        {
+            if (operation == "")
+            {
+                operation = "sqrt";
+                a = double.Parse(Screen.Text);
+                Screen.Text = "√" + a;
             }
         }
 
@@ -154,6 +166,7 @@ namespace Calculator
         {
             if(operation != "")
             {
+                if(operation != "^" && operation != "sqrt")
                 b = int.Parse(Screen.Text);
                 switch(operation) 
                 {
@@ -170,7 +183,7 @@ namespace Calculator
                         Screen.Text = result.ToString();
                         break;
                     case "/":
-                        if (a != 0)
+                        if (a != 0 && b != 0)
                         {
                             result = a / b;
                             Screen.Text = result.ToString();
@@ -182,6 +195,10 @@ namespace Calculator
                         break;
                     case "^":
                         result = a * a;
+                        Screen.Text = result.ToString();
+                        break;
+                    case "sqrt":
+                        result = Math.Sqrt(a);
                         Screen.Text = result.ToString();
                         break;
                 }

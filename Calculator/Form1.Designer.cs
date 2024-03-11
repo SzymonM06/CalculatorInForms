@@ -245,6 +245,7 @@
             this.Squareroot.TabIndex = 17;
             this.Squareroot.Text = "√";
             this.Squareroot.UseVisualStyleBackColor = true;
+            this.Squareroot.Click += new System.EventHandler(this.Squareroot_Click);
             // 
             // Zero
             // 
