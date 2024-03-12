@@ -271,7 +271,7 @@
             // 
             // EqualsButton
             // 
-            this.EqualsButton.BackColor = System.Drawing.Color.Aqua;
+            this.EqualsButton.BackColor = System.Drawing.Color.Gainsboro;
             this.EqualsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.EqualsButton.Location = new System.Drawing.Point(178, 310);
             this.EqualsButton.Name = "EqualsButton";
