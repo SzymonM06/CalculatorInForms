@@ -144,7 +144,7 @@ namespace Calculator
 
         private void XtoPower_Click(object sender, EventArgs e)
         {
-            if (operation == "")
+            if (operation == "" && Screen.Text != "")
             {
                 operation = "^";
                 a = double.Parse(Screen.Text);
@@ -154,7 +154,7 @@ namespace Calculator
 
         private void Squareroot_Click(object sender, EventArgs e)
         {
-            if (operation == "")
+            if (operation == "" && Screen.Text != "")
             {
                 operation = "sqrt";
                 a = double.Parse(Screen.Text);

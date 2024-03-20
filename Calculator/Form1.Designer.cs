@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(240, 368);
+            this.ClientSize = new System.Drawing.Size(240, 366);
             this.Controls.Add(this.EqualsButton);
             this.Controls.Add(this.Dot);
             this.Controls.Add(this.Zero);
