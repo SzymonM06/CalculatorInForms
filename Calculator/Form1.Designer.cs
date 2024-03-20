@@ -49,6 +49,7 @@
             this.Zero = new System.Windows.Forms.Button();
             this.Dot = new System.Windows.Forms.Button();
             this.EqualsButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Screen
@@ -281,12 +282,22 @@
             this.EqualsButton.UseVisualStyleBackColor = false;
             this.EqualsButton.Click += new System.EventHandler(this.EqualsButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 363);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Made by Szymon Matłosz 3TRA";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(240, 366);
+            this.ClientSize = new System.Drawing.Size(240, 381);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.EqualsButton);
             this.Controls.Add(this.Dot);
             this.Controls.Add(this.Zero);
@@ -312,6 +323,7 @@
             this.Name = "Form1";
             this.Text = "Calculator";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -337,6 +349,7 @@
         private System.Windows.Forms.Button Zero;
         private System.Windows.Forms.Button Dot;
         private System.Windows.Forms.Button EqualsButton;
+        private System.Windows.Forms.Label label1;
     }
 }
 

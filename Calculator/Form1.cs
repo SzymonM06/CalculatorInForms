@@ -167,7 +167,7 @@ namespace Calculator
             if(operation != "")
             {
                 if(operation != "^" && operation != "sqrt")
-                b = int.Parse(Screen.Text);
+                b = float.Parse(Screen.Text);
                 switch(operation) 
                 {
                     case "+":
